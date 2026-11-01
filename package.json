@@ -1,0 +1,11 @@
+{
+  "name": "dsh-safe-gate",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "安全闸·防AI自杀/误伤：任何AI在本机装插件/改配置前，强制先做全量快照（无快照=拒绝动手）；配置损坏后一条命令60秒整包恢复；邻居探活确认共享面其他插件存活。灵感来源：DeepSeek Harness智能体为装插件改坏自身配置而自毁的社区事故（2026-11-01热榜）——回形针模式的微缩案例：单目标+共享环境+无副作用记账=必然误伤。防御原理：把邻居存活写进行动成败判定。",
+  "license": "MIT",
+  "main": "./index.js",
+  "files": ["index.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
